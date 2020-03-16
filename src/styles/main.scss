@@ -1,0 +1,293 @@
+@import "abstracts/variables";
+
+// #eb4b55
+// #f3a154
+// #fada4a
+
+
+
+body{
+  background: #25263E;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text{
+  font-size: 60px;
+}
+
+
+// ========== *** GRADIENT BUTTONS *** ==========
+
+
+// Buttons
+%btn-common{
+  border-radius : 20px;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 10px 30px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+// Slightning up button
+.sligh-up{
+  transform: translate(0, 0);
+  transition: all .3s;
+  &:hover{
+    transform: translate(0, -3px);
+  }
+}
+
+// button full colored
+@mixin gbtn($color-1, $color-2) {
+  @extend %btn-common;
+  background-image: linear-gradient(90deg, $color-1, $color-2, $color-2, $color-1);
+  position: relative;
+  background-size: 300% 100%;
+  transition: 0.3s all ease-in-out;
+
+  &:hover{
+    background-position: 100% 0;
+    
+  }
+  // &:hover{
+    // background-position: 100% 0;
+    // transform: translate(0, -3px);
+  // }
+  &::before{
+    content: '';
+    position: absolute;
+    border-radius : 20px;
+    top: 5px;
+    z-index: -1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background : $color-2;
+  }
+}
+
+
+.g-btn{
+  @include gbtn(#fada4a, #eb4b55);
+}
+
+.g-btnSkyblue{
+  @include gbtn(#758cc6, #6bc8cb);
+}
+
+
+// Outline-buttons
+@mixin g-outline-btn($color-1, $color-2) {
+
+  @extend %btn-common;
+  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
+  border: solid 3px transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(90deg, $color-1, $color-2 );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #25263E inset;
+  transition:  0.3s all;
+  &:hover {
+    box-shadow: none;
+}
+}
+
+.g-btn-outline {
+  @include g-outline-btn(#fada4a, #eb4b55);
+  
+
+}
+
+
+
+
+
+
+
+
+// Gradient Texts
+
+%center-vh{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+%text-gradient{
+  background: linear-gradient(to right, #eb4b55 3%, #f3a154 7%, #fada4a 15%);
+	background-clip: text;
+	-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+// h1 {
+//   @extend %text-gradient;
+//   font-size: 72px;
+//   font-family: Arial, Helvetica, sans-serif;
+//   // background: linear-gradient(to right, #eb4b55, #f3a154, #fada4a);
+// }
+
+
+
+// mixins and function  => function are same but funtion return something
+// *** Mixin define ***
+
+@mixin para($color, $text-size) {
+  color: $color;
+  background: wheat;
+  padding: 20px;
+  font-size: $text-size;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+// mixin use
+// h1{
+//   @include para(red, 32px);
+// }
+
+%g-border{
+  border-left: 5px solid #eb4b55;
+  border-right: 5px solid #fada4a;
+  background-image: linear-gradient(90deg, #eb4b55, #fada4a), linear-gradient(90deg, #eb4b55, #fada4a);
+  background-size: 100% 5px;
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+}
+
+.g-border{
+  border-radius: 6px;  
+  @extend %g-border;
+}
+
+p{
+  max-width: 450px;
+  // color: #fff;
+  // text-align: center;
+  // margin: auto;
+  // font-size: 22px;
+  // padding: 20px;
+  // border: 10px solid;
+  // border-image: linear-gradient(to right, rgb(0, 210, 255), rgb(58, 123, 213));
+  // border-image-slice: 1;
+  
+  
+}
+
+// Inheritance / @extends
+
+%box-common{
+  border: 3px solid #000;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.box{
+  @extend %box-common;
+  background-color: rgba(0, 255, 0, 0.3);
+  border-color: rgba(0, 255, 0, 0.3);
+}
+
+
+
+// game card
+
+%card-size{
+  margin: 10rem;
+  width: 250px;
+  height: 360px;
+  
+
+}
+
+// 250px width 
+// 360px width
+
+.game-card-box{
+  @extend %card-size;
+  @extend %g-border;
+  @extend %center-vh;
+  border-radius: 12px;
+}
+
+.game-card{
+  @extend %card-size;
+  overflow: hidden;
+  position: relative;
+  border-radius : 12px;
+  // background : rgba(0, 0, 0, 1);
+  // opacity : 0.58;
+  
+  img{
+    border-radius : 12px;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s all ease-in-out;
+  }
+
+  .special-btn{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: all 0.3s;
+    
+  }
+
+  &::before{
+    content: "";
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       height: 100%;
+       border-radius : 12px;
+       background : rgba(0, 0, 0, 1);
+       transition: 0.3s;
+       z-index: 1;
+       opacity: 0;
+  }
+
+  &:hover{
+
+    img{
+      transform: scale(1.04);
+    }
+
+    &::before{
+      opacity : 0.58;
+    }
+
+    .special-btn{
+      visibility: visible;
+      opacity: 1;
+    }
+}
+
+}
+
+
+// Gradient Icons
+.g-icon{
+  @extend %text-gradient;
+}
+
+// background: linear-gradient(to right, #eb4b55 24%, #f3a154 53%, #fada4a 70%);
+
+
+
+
+
+
