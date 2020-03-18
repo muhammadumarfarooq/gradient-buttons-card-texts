@@ -1,37 +1,53 @@
-.table{
-
+.table {
+  margin-bottom: 5rem;
   position: relative;
 
-  &-wraper{
-  background : linear-gradient(77.87deg, rgba(54, 53, 104, 1) 0%, rgba(154, 102, 155, 0.5) 100%);
-  border-radius : 36px;
-  padding: 30px; 
- 
+  &-wraper {
+    border-radius: 36px;
+    padding: 30px;
   }
 
-  &-row{
-    background : linear-gradient(90deg, rgba(54, 53, 104, 1) 0%, rgba(36, 38, 62, 1) 100%);
-    border-radius : 12px;
-    height: 50px;
-    margin-bottom: 30px; 
+  &-row {
+    border-radius: 12px;
+    margin-bottom: 30px;
 
-     &-colored{
-  background : linear-gradient(90deg, rgba(54, 53, 104, 1) 0%, rgba(154, 102, 155, 1) 100%);
-     }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-     &:last-child{
-       margin-bottom: 0;
-     }
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
+  .table-img {
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
 }
 
-// .box{
-//   background: rgba(255, 0, 0, 0.5);
-//   width: 200px;
-//   height: 200px;
-//   position: absolute;
-//   top: 0;
-//   left: 100px;
-//   z-index: -1;
-// }
+.bluish-gradient {
+  background: linear-gradient(
+    77.87deg,
+    rgba(54, 53, 104, 1) 0%,
+    rgba(154, 102, 155, 0.5) 100%
+  );
+}
+
+.bluish-row-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(54, 53, 104, 1) 0%,
+    rgba(154, 102, 155, 1) 100%
+  );
+}
+
+.full-bluish-gradient {
+  background: linear-gradient(
+    90deg,
+    rgba(54, 53, 104, 1) 0%,
+    rgba(36, 38, 62, 1) 100%
+  );
+}
