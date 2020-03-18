@@ -36,6 +36,17 @@
   );
 }
 
+.orange-gradient {
+  background: linear-gradient(
+    77.87deg,
+    hsla(54, 97%, 55%, 0.5) 0%,
+    rgba(251, 214, 54, 0.5) 11.41%,
+    rgba(248, 165, 118, 0.5) 45.7%,
+    rgba(247, 160, 122, 0.5) 50.34%,
+    rgba(239, 110, 167, 0.5) 100%
+  );
+}
+
 .bluish-row-gradient {
   background: linear-gradient(
     90deg,

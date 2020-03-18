@@ -8,9 +8,9 @@ const tableContents = {
   mdCol: 2,
   smCol: 3,
   col: 4,
-  tableClassName: "blueish-table",
-  oddRowClassName: "full-bluish-gradient",
-  evenRowClassName: "bluish-row-gradient",
+  tableClassName: "orange-gradient",
+  // oddRowClassName: "bluish-row-gradient",
+  evenRowClassName: "full-bluish-gradient",
   content: ["Game", "Time", "ID", "Player", "wager", "Payout"]
 };
 
@@ -41,24 +41,24 @@ const Table = ({ children }) => {
             </div>
           ))}
         </div>
-        <div className='row table-wraper bluish-gradient'>
+        <div className={`row table-wraper ${tableClassName}`}>
           <div className='col-md-12'>
-            <div className='row table-row'>{children}</div>
+            {/* <div className='row table-row'>{children}</div> */}
             {indexing.map((item, index) => {
               return (
                 <div
                   className={`row table-row ${
-                    evenRowClassName ? giveGradient(index) : oddRowClassName
+                    oddRowClassName ? giveGradient(index) : evenRowClassName
                   }`}
                 >
-                  <div className='col-md-2 table-img'>
+                  <div className='col-md-2 col-sm-2 col-2 table-img'>
                     <img src={icon} alt='table-icon' />
                   </div>
-                  <div className='col-md-2'>08.20</div>
-                  <div className='col-md-2'>Z7394Z</div>
-                  <div className='col-md-2'>Player</div>
-                  <div className='col-md-2'>05</div>
-                  <div className='col-md-2'>1.3</div>
+                  <div className='col-md-2 col-sm-2 col-2'>08.20</div>
+                  <div className='col-md-2 col-sm-2 col-3'>Z7394Z</div>
+                  <div className='col-md-2 col-sm-2 col-2'>Player</div>
+                  <div className='col-md-2 col-sm-2 col-1'>05</div>
+                  <div className='col-md-2 col-sm-2 col-1'>1.3</div>
                 </div>
               );
             })}
