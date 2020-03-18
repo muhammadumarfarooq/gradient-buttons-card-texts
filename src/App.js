@@ -1,4 +1,6 @@
 import React from "react";
+import Table from './Table';
+
 
 function App() {
   return (
@@ -56,6 +58,8 @@ function App() {
 
       <i class='fa fa-3x fa-wrench g-icon'></i>
       <i class='fab fa-facebook-f fa-3x g-icon'></i>
+
+      <Table />
     </div>
   );
 }
