@@ -18,8 +18,7 @@ const SliderC = () => {
   };
 
   return (
-    <div className="slider">
-      
+    <div className='slider'>
       <Slider {...settings}>
         <div className='img-box'>
           <img
@@ -32,7 +31,8 @@ const SliderC = () => {
             src='http://development.truegaming.org/assets/Images/True-Gaming---Community-Banner.jpg'
             alt='img'
           />
-        </div><div className='img-box'>
+        </div>
+        <div className='img-box'>
           <img
             src='http://development.truegaming.org/assets/Images/True-Gaming---Community-Banner.jpg'
             alt='img'
@@ -43,7 +43,8 @@ const SliderC = () => {
             src='http://development.truegaming.org/assets/Images/True-Gaming---Community-Banner.jpg'
             alt='img'
           />
-        </div><div className='img-box'>
+        </div>
+        <div className='img-box'>
           <img
             src='http://development.truegaming.org/assets/Images/True-Gaming---Community-Banner.jpg'
             alt='img'
