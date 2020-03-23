@@ -2,6 +2,7 @@ import React from "react";
 import Table from "./Table";
 import SliderC from "./SliderC";
 import ModalC from "./ModalC";
+import ProgressC from "./styles/components/ProgressC";
 import TabsC from "./styles/components/TabsC";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className='app'>
       <ModalC />
       <TabsC />
+      <ProgressC />
     </div>
   );
 }

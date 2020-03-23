@@ -1,0 +1,14 @@
+.progress-border {
+  width: 100%;
+  height: 40px;
+  border: 5px solid red;
+  border-radius: 21px;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  .border-bar {
+    height: 100%;
+    width: 60%;
+    border-radius: 21px;
+    background-color: chocolate;
+  }
+}
