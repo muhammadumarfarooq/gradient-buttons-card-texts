@@ -17,6 +17,10 @@ const TabsC = () => {
     setValue(newValue);
   };
 
+  const getTabClassName = index => {
+    return value === index ? `tab${index}-outline` : `tab${index}`;
+  };
+
   return (
     <div className='tabs-c'>
       <Tabs
@@ -24,14 +28,14 @@ const TabsC = () => {
         onChange={handleChange}
         aria-label='simple tabs example'
       >
-        <Tab label='Item One' className={`tab1`} />
-        <Tab label='Item Two' className={`tab2`} />
-        <Tab label='Item Three' className={`tab3`} />
-        <Tab label='Item Four' className={`tab4`} />
-        <Tab label='Item Five' className={`tab5`} />
+        <Tab label='Item One' className={getTabClassName(0)} />
+        <Tab label='Item Two' className={getTabClassName(1)} />
+        <Tab label='Item Three' className={getTabClassName(2)} />
+        <Tab label='Item Four' className={getTabClassName(3)} />
+        <Tab label='Item Five' className={getTabClassName(4)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        h1
+        Item one
       </TabPanel>
       <TabPanel value={value} index={1}>
         Item Two
