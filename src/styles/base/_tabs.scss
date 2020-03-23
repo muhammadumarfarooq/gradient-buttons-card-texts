@@ -64,6 +64,12 @@
 }
 
 .tabs-c {
+  .MuiTabs-flexContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
   .MuiTabs-indicator {
     display: none;
   }
@@ -90,6 +96,12 @@
     white-space: normal;
     letter-spacing: normal;
     text-transform: uppercase;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+
     @media (min-width: 600px) {
       min-width: auto;
     }
@@ -113,7 +125,7 @@
 }
 
 .tab0-outline {
-  @include g-outline-btn(#fada4a, #eb4b55);
+  @include g-outline-btn(#ef6ea7, #f8b09d);
 }
 .tab1-outline {
   @include g-outline-btn(#9ace80, #5dbb5a);

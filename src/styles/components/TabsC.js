@@ -18,11 +18,11 @@ const TabsC = () => {
   };
 
   const getTabClassName = index => {
-    return value === index ? `tab${index}-outline` : `tab${index}`;
+    return value === index ? `tab${index}` : `tab${index}-outline`;
   };
 
   return (
-    <div className='tabs-c'>
+    <div className='tabs-c container'>
       <Tabs
         value={value}
         onChange={handleChange}
