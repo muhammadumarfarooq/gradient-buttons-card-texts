@@ -5,6 +5,7 @@ import ModalC from "./ModalC";
 import ProgressC from "./styles/components/ProgressC";
 import TabsC from "./styles/components/TabsC";
 import DailyTasks from "./styles/components/DailyTasks";
+import ScrollC from "./styles/components/ScrollC";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <TabsC />
       <ProgressC />
       <DailyTasks />
+      <ScrollC />
     </div>
   );
 }
