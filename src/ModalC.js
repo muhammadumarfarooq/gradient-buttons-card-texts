@@ -56,16 +56,18 @@ const ModalC = () => {
 
             {/* cross button */}
 
-            <div className='cross-img-box'>
+            <div onClick={handleClose} className='cross-img-box'>
               <img src={crossImg} alt='cross-img' />
             </div>
 
-            <h1>Modal Example</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Temporibus voluptatem delectus quam inventore nulla dolore
-              consequuntur. Quibusdam eius quos atque!
-            </p>
+            <div className='modal-indside-content'>
+              <h1>Modal Example</h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus voluptatem delectus quam inventore nulla dolore
+                consequuntur. Quibusdam eius quos atque!
+              </p>
+            </div>
           </div>
         </Fade>
       </Modal>

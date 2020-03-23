@@ -2,11 +2,13 @@ import React from "react";
 import Table from "./Table";
 import SliderC from "./SliderC";
 import ModalC from "./ModalC";
+import TabsC from "./styles/components/TabsC";
 
 function App() {
   return (
     <div className='app'>
       <ModalC />
+      <TabsC />
     </div>
   );
 }

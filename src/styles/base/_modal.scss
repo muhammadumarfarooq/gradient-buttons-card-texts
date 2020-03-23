@@ -1,5 +1,4 @@
 .modalC {
-  color: #000;
   background: linear-gradient(
     136.6deg,
     rgba(54, 53, 104, 1) 0%,
@@ -18,12 +17,18 @@
   align-items: center;
   flex-direction: column;
 
+  .modal-indside-content {
+    position: relative;
+    z-index: 11;
+  }
+
   .bg-img-box {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 60vh;
+
     img {
       width: 100%;
       height: 100%;
@@ -36,6 +41,7 @@
     right: -44px;
     width: 40px;
     height: 40px;
+    cursor: pointer;
     img {
       width: 100%;
       height: 100%;
