@@ -28,11 +28,11 @@ const TabsC = () => {
         onChange={handleChange}
         aria-label='simple tabs example'
       >
-        <Tab label='Item One' className={getTabClassName(0)} />
-        <Tab label='Item Two' className={getTabClassName(1)} />
-        <Tab label='Item Three' className={getTabClassName(2)} />
-        <Tab label='Item Four' className={getTabClassName(3)} />
-        <Tab label='Item Five' className={getTabClassName(4)} />
+        <Tab label='Stats' className={getTabClassName(0)} />
+        <Tab label='History' className={getTabClassName(1)} />
+        <Tab label='Ranking' className={getTabClassName(2)} />
+        <Tab label='Daily Tasks' className={getTabClassName(3)} />
+        <Tab label='Referrals' className={getTabClassName(4)} />
       </Tabs>
       <TabPanel value={value} index={0}>
         Item one
