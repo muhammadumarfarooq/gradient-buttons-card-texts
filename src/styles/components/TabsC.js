@@ -5,16 +5,9 @@ import Tab from "@material-ui/core/Tab";
 import Typography from "@material-ui/core/Typography";
 
 function TabPanel(props) {
-  const { children, value, index, ...other } = props;
+  const { children, value, index } = props;
 
   return value === index && children;
-}
-
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`
-  };
 }
 
 const TabsC = () => {
@@ -25,18 +18,18 @@ const TabsC = () => {
   };
 
   return (
-    <div>
-      <AppBar position='static'>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label='simple tabs example'
-        >
-          <Tab label='Item One' className='some-thing' />
-          <Tab label='Item Two' />
-          <Tab label='Item Three' />
-        </Tabs>
-      </AppBar>
+    <div className='tabs-c'>
+      <Tabs
+        value={value}
+        onChange={handleChange}
+        aria-label='simple tabs example'
+      >
+        <Tab label='Item One' className={`tab1`} />
+        <Tab label='Item Two' className={`tab2`} />
+        <Tab label='Item Three' className={`tab3`} />
+        <Tab label='Item Four' className={`tab4`} />
+        <Tab label='Item Five' className={`tab5`} />
+      </Tabs>
       <TabPanel value={value} index={0}>
         h1
       </TabPanel>
@@ -45,6 +38,12 @@ const TabsC = () => {
       </TabPanel>
       <TabPanel value={value} index={2}>
         Item Three
+      </TabPanel>
+      <TabPanel value={value} index={3}>
+        Item Four
+      </TabPanel>
+      <TabPanel value={value} index={4}>
+        Item Five
       </TabPanel>
     </div>
   );
